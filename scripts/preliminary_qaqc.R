@@ -20,6 +20,7 @@ librarian::shelf(tidyverse,
 # Local Import-Export
 raw_data <- "./data/raw"
 processed_data <- "./data/processed"
+shape_files <- "./data/shapefiles"
 
 nsi_rcm_phys_dat <- read_csv(paste(raw_data,"guerrero_etal_23_ywrb_physical_hyporheic_char.csv", sep = '/'),
                  show_col_types = FALSE)
@@ -27,9 +28,39 @@ nsi_rcm_phys_dat <- read_csv(paste(raw_data,"guerrero_etal_23_ywrb_physical_hypo
 nlcd_2001_dat <- read_csv(paste(raw_data,"nlcd_2001_v2019_NLCD01_TOT_CONUS.csv", sep = '/'),
                           show_col_types = FALSE)
 
+pnw_rivers_dat <- st_transform(st_read(paste(shape_files,"nsi_network_ywrb.shp",sep = "/")),4326)
+
 # Let's take a look at the data
 
 summary(nsi_rcm_phys_dat)
+
+#Let's also create a dataset that allows for mapping some of these variables:
+
+pnw_rivers_map <- pnw_rivers_dat %>% 
+  select(COMID) %>% 
+  rename(comid = COMID) %>% 
+  merge(.,
+        nsi_rcm_phys_dat,
+        by = "comid", 
+        all.x = TRUE)
+
+# Stream orders rank from 1 - 9, let's take a look at the map
+
+leaflet(pnw_rivers_map) %>% 
+  addPolylines(weight = 2) %>% 
+  addPolylines(data = filter(pnw_rivers_map,stream_order>8),
+               color = "magenta",
+               opacity = 1,
+               weight = 3) %>% 
+  addProviderTiles("Esri.WorldImagery")
+
+# The reach order 9 in this case correspond to the Columbia River, so we remove it
+# from the dataset
+
+nsi_rcm_phys_dat_m1 <- nsi_rcm_phys_dat %>% 
+  filter(stream_order<9)
+
+
 
 # Variables including zero values
 
