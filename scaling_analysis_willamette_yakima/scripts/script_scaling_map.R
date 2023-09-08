@@ -5,6 +5,9 @@
 ## 
 # ########### #
 # ########### #
+#
+## 9/8: Willamette boundary is wrong, rolling with it for now but will want to
+## fix (ideally get source from Fco) asap
 
 
 # 1. Setup ---------------------------------------------------------------------
@@ -14,6 +17,7 @@ require(pacman)
 p_load(tidyverse, 
        rnaturalearth, # for pulling in US states
        nhdplusTools, # for pulling NHD data
+       cowplot,
        ggthemes, #theme_map()
        sf)
 
@@ -25,20 +29,52 @@ common_crs = 4326
 ## Coordinate projection for coord_sf to make things look cool
 coord_sf_crs = "+proj=aea +lat_1=25 +lat_2=50 +lon_0=-100"
 
+## Set watershed color scheme
+y_color = "forestgreen"
+w_color = "blue"
 
 # 2. Read in watershed shapefiles ----------------------------------------------
 
-nsi <- read_sf(paste0(shp_path, "nsi_network_ywrb.shp")) %>% 
+nsi <- read_sf(paste0(shp_path, "nsi_network_ywrb/nsi_network_ywrb.shp")) %>% 
   st_transform(crs = common_crs)
 
 nsi
 
 ggplot() + 
-  geom_sf(data = nsi)
+  geom_sf(data = nsi) + 
+  theme_minimal()
+
+## There isn't a convenient way to break these apart, so I'll use st_crop
+yakima_flowlines <- st_crop(nsi, xmin = -122, xmax = -119, ymin = 45.9, ymax = 48)
+willamette_flowlines <- st_crop(nsi, xmin = -124, xmax = -121, ymin = 43, ymax = 46)
+
+## Now squish em back together with watershed labeled
+flowlines <- bind_rows(yakima_flowlines %>% mutate(watershed = "Yakima"), 
+                       willamette_flowlines %>% mutate(watershed = "Willamette"))
+
+## Double-check things are labeled right
+ggplot() + 
+  geom_sf(data = flowlines, aes(color = watershed)) + 
+  theme_minimal()
 
 
-# 3. Set up bounding boxes
-yk_bbox = 
+# 3. Pull watershed boundaries -------------------------------------------------
+
+yakima_boundary <- get_huc(AOI = st_union(yakima_flowlines), type = "huc08") %>% 
+  filter(id != "wbd08_20201006.1872") %>% # manually remove one that doesn't belong
+  st_union() %>% 
+  st_as_sf()
+
+## I tried the same approach with the Willamette, but it was pretty resistant, 
+## primarily on trying hard to include the Columbia moving NW. Let's use sf
+## tools instead to simply outline
+willamette_boundary <- read_sf(paste0(shp_path, "mmt_willametteinitiative/WillametteBasin.shp")) %>% 
+  st_transform(crs = common_crs)
+
+## These polygons didn't want to merge, can troubleshoot later, but for now will
+## just treat as two separate layers. Would be ideal to match format for flowlines
+## above, will be easier if I get equivalent outline shapefile(s) from Fco
+
 
 # 4. Pull in states for reference ----------------------------------------------
 
@@ -50,16 +86,59 @@ pnw <- conus %>%
   filter(name == "Washington" | 
            name == "Oregon")
 
-x <- get_huc(AOI = nsi, type = "huc08")
 
-ggplot() + 
-  geom_sf(data = pnw) + 
-  geom_sf(data = nsi) + 
-  theme_minimal() + 
- # theme_map() + 
+# 5. Panel A: regional context -------------------------------------------------
+
+## Standardize the alpha for watershed shading across plots
+basin_fill_alpha = 0.2
+
+plot_a <- ggplot() + 
+  geom_sf(data = pnw, fill = "gray97") + 
+  geom_sf(data = yakima_boundary, color = "black", fill = y_color, alpha = basin_fill_alpha) + 
+  geom_sf(data = willamette_boundary, color = "black", fill = w_color, alpha = basin_fill_alpha) + 
+  theme_map() + 
+  coord_sf(crs = coord_sf_crs)
+
+# 6. Panel B: Yakima Basin -----------------------------------------------------
+
+plot_b <- ggplot() + 
+  geom_sf(data = yakima_boundary, color = "black", 
+          fill = y_color, alpha = basin_fill_alpha) + 
+  geom_sf(data = yakima_flowlines, color = "gray20") + 
+  theme_map() + 
   coord_sf(crs = coord_sf_crs)
 
 
-nhdplusTools::
+# 6. Panel C: Willamette Basin -------------------------------------------------
 
+plot_c <- ggplot() + 
+  geom_sf(data = willamette_boundary, color = "black", 
+          fill = w_color, alpha = basin_fill_alpha) + 
+  geom_sf(data =  willamette_flowlines, color = "gray20") + 
+  theme_map() + 
+  coord_sf(crs = coord_sf_crs)
+
+
+# 7. Panel D: Basin comparisons ------------------------------------------------
+
+## I'm not sure what would be most useful for this panel, and maybe that makes
+## the figure too crowded, but the idea is that we can show (and then reference)
+## important characteristics that are similar or different between basins
+
+## Calculate area
+w_area <- as.numeric(st_area(willamette_boundary) / (1000*1000)) #convert m2 to km2
+y_area <- as.numeric(st_area(yakima_boundary) / (1000*1000)) #convert m2 to km2
+
+area <- tibble(basin = c("Willamette", "Yakima"), 
+               area = c(w_area, y_area))
+
+plot_d <- ggplot(area, aes(basin, area, fill = basin)) + 
+  geom_col(color = "black", alpha = basin_fill_alpha) + 
+  scale_fill_manual(values = c(w_color, y_color))
+
+
+# 8. Merge and export figure ---------------------------------------------------
+
+plot_grid(plot_a, plot_b, plot_c, plot_d, labels = c("A", "B", "C", "D"), 
+          nrow = 2)
 
