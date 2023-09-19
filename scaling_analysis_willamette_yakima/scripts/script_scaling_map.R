@@ -97,14 +97,18 @@ plot_a <- ggplot() +
   geom_sf(data = yakima_boundary, color = "black", fill = y_color, alpha = basin_fill_alpha) + 
   geom_sf(data = willamette_boundary, color = "black", fill = w_color, alpha = basin_fill_alpha) + 
   theme_map() + 
-  coord_sf(crs = coord_sf_crs)
+  coord_sf(crs = coord_sf_crs) #+ 
+  #ggtitle("Content only, formatting later!")
 
 # 6. Panel B: Yakima Basin -----------------------------------------------------
+
+## Standardize flowline color
+flowline_color = "darkblue"
 
 plot_b <- ggplot() + 
   geom_sf(data = yakima_boundary, color = "black", 
           fill = y_color, alpha = basin_fill_alpha) + 
-  geom_sf(data = yakima_flowlines, color = "gray20") + 
+  geom_sf(data = yakima_flowlines, color = flowline_color, alpha = 0.6) + 
   theme_map() + 
   coord_sf(crs = coord_sf_crs)
 
@@ -114,7 +118,7 @@ plot_b <- ggplot() +
 plot_c <- ggplot() + 
   geom_sf(data = willamette_boundary, color = "black", 
           fill = w_color, alpha = basin_fill_alpha) + 
-  geom_sf(data =  willamette_flowlines, color = "gray20") + 
+  geom_sf(data =  willamette_flowlines, color = flowline_color, alpha = 0.6) + 
   theme_map() + 
   coord_sf(crs = coord_sf_crs)
 
@@ -133,12 +137,32 @@ area <- tibble(basin = c("Willamette", "Yakima"),
                area = c(w_area, y_area))
 
 plot_d <- ggplot(area, aes(basin, area, fill = basin)) + 
-  geom_col(color = "black", alpha = basin_fill_alpha) + 
-  scale_fill_manual(values = c(w_color, y_color))
+  geom_col(color = "black", alpha = basin_fill_alpha, show.legend = F) + 
+  scale_fill_manual(values = c(w_color, y_color)) + 
+  labs(x = "", y = "Basin area (km2)") +
+  theme_minimal() 
 
 
 # 8. Merge and export figure ---------------------------------------------------
 
 plot_grid(plot_a, plot_b, plot_c, plot_d, labels = c("A", "B", "C", "D"), 
           nrow = 2)
+ggsave("results/guerrero_etal_23_Fig1_map.png", width = 12, height = 10)
+
+
+# 9. Write out individual figure layers to manipulate later --------------------
+  
+plot_a
+ggsave("results/Figure 1 Layers/guerrero_etal_23_Fig1A.pdf", width = 4, height = 6)
+
+plot_b
+ggsave("results/Figure 1 Layers/guerrero_etal_23_Fig1B.pdf", width = 4, height = 6)
+
+plot_c
+ggsave("results/Figure 1 Layers/guerrero_etal_23_Fig1C.pdf", width = 4, height = 6)
+
+plot_d
+ggsave("results/Figure 1 Layers/guerrero_etal_23_Fig1D.pdf", width = 3, height = 2)
+
+
 
