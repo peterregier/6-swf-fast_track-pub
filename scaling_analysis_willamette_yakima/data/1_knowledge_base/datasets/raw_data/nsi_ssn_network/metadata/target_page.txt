@@ -1,0 +1,68 @@
+NSI Hydrography Network for SSN Analysis
+SSN  analyses can be based on any digital hydrography network but these require  topological reconditioning with the STARS ArcGIS toolkit to meet the compatibility  requirements before conducting a spatial analysis. The reconditioning process  may be time consuming and requires considerable GIS skills, so the NSI network  was developed to expedite SSN analysis by reconditioning the NHD-Plus Version 2  medium resolution (1:100,000-scale) hydrography layer for all streams in the  contiguous United States using the STARS toolkit. Use of NHD-Plus to create the  NSI network also enables users to tap into large databases of reach descriptors developed for NHD-Plus that serve  as useful predictor variables in spatial analyses. The NSI network is fully back-compatible with the original NHD-Plus layer after completion of a SSN analysis. 
+Shapefiles of the NSI network are available  here for download by  NHD production units; as are shapefiles of prediction points that can be used to make predictions  at unsampled locations and map the results of SSN analyses. Each shapefile has specific metadata, but for general metadata see the General Flowline  Metadata document  or the Prediction Points Metadata document.  A comprehensive description of the technical  procedures applied to the NHD-Plus  hydrography layer, as well as additional steps  that are required to prepare datasets for SSN  analysis are described in the NSI User Guide. 
+Related Presentation: The NSI Network: Modifying NHDPlus to Facilitate SSN Analysis
+Stream line and prediction point shapefiles
+Citation to use: Nagel, D., S. Wollrab, S. Parkes-Payne, E.  Peterson, D. Isaak, and J. Ver Hoef. 2017. National Stream Internet hydrography  datasets for spatial-stream-network (SSN) analysis. Rocky Mountain Research  Station, U.S. Forest Service Data Archive, Fort Collins, CO. DOI: pending.
+Stream Line and Prediction Point Shapefiles (zip format)
+Flowline_NE01_NSI.shp
+PredictionPoints_NE01_NSI.shp
+Flowline_MA02_NSI.shp
+PredictionPoints_MA02_NSI.shp
+Flowline_SA03N_NSI.shp
+PredictionPoints_SA03N_NSI.shp
+Flowline_SA03S_NSI.shp
+PredictionPoints_SA03S_NSI.shp
+Flowline_SA03W_NSI.shp
+PredictionPoints_SA03W_NSI.shp
+Flowline_GL04_NSI.shp
+PredictionPoints_GL04_NSI.shp
+Flowline_MS05_NSI.shp
+PredictionPoints_MS05_NSI.shp
+Flowline06_NSI.shp
+PredictionPoints06_NSI.shp
+Flowline_MS07_NSI.shp
+PredictionPoints_MS07_NSI.shp
+Flowline_MS08_NSI.shp
+PredictionPoints_MS08_NSI.shp
+Flowline09_NSI.shp
+PredictionPoints09_NSI.shp
+Flowline_MS10u_NSI.shp
+PredictionPoints_MS10u_NSI.shp
+Flowline_MS10L_NSI.shp
+PredictionPoints_MS10L_NSI.shp
+Flowline_MS11_NSI.shp
+PredictionPoints_MS11_NSI.shp
+Flowline_TX12_NSI.shp
+PredictionPoints_TX12_NSI.shp
+Flowline_RG13_NSI.shp
+PredictionPoints_RG13_NSI.shp
+Flowline_CO14_NSI.shp
+PredictionPoints_CO14_NSI.shp
+Flowline_CO15_NSI.shp
+PredictionPoints_CO15_NSI.shp
+Flowline_GB16_NSI.shp
+PredictionPoints_GB16_NSI.shp
+Flowline_PN17_NSI.shp
+PredictionPoints_PN17_NSI.shp
+Flowline_CA18_NSI.shp
+PredictionPoints_CA18_NSI.shp
+
+NSI Resources
+Workshop & presentations
+NSI hydrography network (shapefiles)
+Databases of stream reach descriptors
+Bibliography of SSN studies
+Related Websites
+The National Stream Internet
+NorWeST: Regional Database & Modeled Stream Temperature
+SSN &  STARS: Tools for Spatial Statistical Modeling on Stream Networks
+Climate Shield Cold-Water Refuge Streams for Native Trout
+Stream Temperature Modeling and Monitoring
+Climate-Aquatics Blog
+U.S. Stream Flow Metric Dataset
+National Genomics Center for Wildlife and Fish Conservation
+Sculpins of the West - A molecular taxonomy of Cottus in western North America
+The Range-Wide Bull Trout eDNA Project
+ 
+Find W&W and follow us on your favorite social media site:

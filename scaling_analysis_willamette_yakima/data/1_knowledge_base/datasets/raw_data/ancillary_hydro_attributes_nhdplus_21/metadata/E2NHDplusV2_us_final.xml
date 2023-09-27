@@ -1,0 +1,1622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Schwarz, G.E.</origin>
+        <pubdate>20191206</pubdate>
+        <title>E2NHDPlusV2_us: Database of Ancillary Hydrologic Attributes and Modified Routing for NHDPlus Version 2.1 Flowlines</title>
+        <geoform>tabular digital data</geoform>
+        <onlink>https://doi.org/10.5066/P986KZEM</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>The National Hydrography Dataset Plus, Version 2  (NHDPlusV2) is an attribute rich, digital hydrologic network for the Conterminous U.S. developed by the U.S. Environmental Protection Agency (EPA) and U.S. Geological Survey (USGS). SPAtially Referenced Regressions On Watershed attributes (SPARROW), is a process-based/statistical model that relies on a digital hydrologic network, like NHDPlusV2, in order to establish spatial relations between monitored contaminant loads, contaminant sources, and other watershed characteristics. The USGS National Water Quality Assessment (NAWQA) project adopted the medium-resolution NHDPlusV2 network as the primary framework supporting SPARROW modeling, and has become a unifying system for reporting hydrologic information. This metadata describes enhancements made to improve the routing capabilities and ancillary hydrologic attributes of NHDPlusV2 to support modeling and other hydrologic analyses. The resulting enhanced network is named E2NHDPlusV2_us.</abstract>
+      <purpose>These data represent a topologically reconditioned version of the NHDPlusV2 routing network (McKay and others, 2012), including enhanced attributes to improve flow routing and the physical description of flowlines. The modifications pertain only to NHDPlus data table values; no physical changes were made to the spatial locations of flowlines or catchments. The approach assumes the pre-existence of the NHDPlus network and its attributes, although many of the attributes can be generated without reference to existing values. The enhanced dataset, named E2NHDPlusV2_us, represents a national framework useful for the hydrologic referencing of spatial data, and is an extension of the work in Schwarz and Wieczorek, 2018. The data are useful to hydrologic modeling, such as the SPARROW water-quality model, and other analyses relating spatial features to hydrologic data.</purpose>
+      <supplinf>Details of methods are described in Brakebill and others, 2019, and in Schwarz and Wieczorek, 2018.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>2019</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-126.0352</westbc>
+        <eastbc>-65.7422</eastbc>
+        <northbc>49.3824</northbc>
+        <southbc>24.2069</southbc>
+      </bounding>
+      <descgeog>CONUS</descgeog>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>biota</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>NHDPlus</themekey>
+        <themekey>hydrography</themekey>
+        <themekey>routing</themekey>
+        <themekey>SPARROW</themekey>
+        <themekey>hydrologic network</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:5d16509ee4b0941bde5d8ffe</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Conterminous United States</placekey>
+      </place>
+    </keywords>
+    <accconst>None.  Please see 'Distribution Info' for details.</accconst>
+    <useconst>None.  Users are advised to read the data set's metadata thoroughly to understand appropriate use and data limitations.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Gregory E Schwarz</cntper>
+          <cntorg>USGS</cntorg>
+        </cntperp>
+        <cntpos>Economist</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Mail Stop 413</address>
+          <city>Reston</city>
+          <state>Va</state>
+          <postal>20192</postal>
+        </cntaddr>
+        <cntvoice>703-648-5718</cntvoice>
+        <cntemail>geschwarz@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <native>E2nhdplusV2_us.csv 1,175,761 KB</native>
+    <crossref>
+      <citeinfo>
+        <origin>Brakebill, J.W.</origin>
+        <origin>Schwarz, G.E.</origin>
+        <origin>Wieczorek, M.E.</origin>
+        <pubdate>2019</pubdate>
+        <title>An Enhanced Hydrologic Stream Network Based on the NHDPlus Medium Resolution Dataset</title>
+        <geoform>publication</geoform>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>The upstream basin areas were calculated for divergence routed and total upstream accumulations and compared to basin areas published in the NHDPlusV2 data suite (Brakebill and others, 2019).</attraccr>
+    </attracc>
+    <logic>A series of checks were performed on the master E2NHDPlusV2_us database file to ensure the logical consistency of the modifications, such as:  1) ensuring only one flowline at a diversion was coded as the primary pathway, 2) diversion fractions across the pathways sum to one, and 3) the flow connectivity of the network was not compromised by altering the flow direction after reordering the network with the revised HYDROSEQ numbers (Brakebill and others, 2019).</logic>
+    <complete>Data set is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>A formal accuracy assessment of the horizontal positional information in the data set was not conducted.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>A formal accuracy assessment of the vertical positional information in the data set was not conducted.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Gregory E. Schwarz</origin>
+            <origin>Michael E. Wieczorek</origin>
+            <pubdate>2018</pubdate>
+            <title>Database of modified routing for NHDPlus version 2.1 flowlines: ENHDPlusV2_us</title>
+            <geoform>dataset</geoform>
+            <pubinfo>
+              <pubplace>https://www.sciencebase.gov</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.5066/p9pa63sm</onlink>
+          </citeinfo>
+        </srccite>
+        <srcscale>100000</srcscale>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>2018</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>ENHDPlusV2_us</srccitea>
+        <srccontr>Compilation of original NHDPlus files and attributes.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>McKay, L.</origin>
+            <origin>Bondelid, T.</origin>
+            <origin>Dewald, T.</origin>
+            <origin>Johnston, J.</origin>
+            <origin>Moore, R.</origin>
+            <origin>Rea, A.</origin>
+            <pubdate>2012</pubdate>
+            <title>NHDPlus Version 2: User Guide</title>
+            <geoform>publication</geoform>
+            <onlink>https://s3.amazonaws.com/nhdplus/NHDPlusV21/Documentation/NHDPlusV2_User_Guide.pdf</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>2012</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>ground condition</srccurr>
+        </srctime>
+        <srccitea>NHDPlus</srccitea>
+        <srccontr>Attribute Information</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Brakebill, J.W.</origin>
+            <origin>Schwarz, G.E.</origin>
+            <origin>Wieczorek, M.E.</origin>
+            <pubdate>20190930</pubdate>
+            <title>An Enhanced Hydrologic Stream Network Based on the NHDPlus Medium Resolution Dataset</title>
+            <geoform>publication</geoform>
+            <onlink>https://doi.org/</onlink>
+          </citeinfo>
+        </srccite>
+        <srcscale>100000</srcscale>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>2019</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>E2NHDPlusV2_us enhancement details</srccitea>
+        <srccontr>Description of enhancements</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>NHDPlusV2 data were downloaded from EPA  (Brakebill and others, 2019; McKay and others, 2012). 
+Download nhdplusv2 using the program get_nhdplus_files.py located in the scripts.zip folder.</procdesc>
+        <srcused>Schwarz and others, 2018</srcused>
+        <procdate>20150310</procdate>
+        <srcprod>ENHDPlusV2_us, Schwarz and Wieczorek, 2018</srcprod>
+      </procstep>
+      <procstep>
+        <procdesc>Below is a sequential description of SAS scripts executed to make and modify network routing and ancillary attributes. Processing took place between March, 2015 and March 2017. SAS Scripts used to modify attributes and create the E2NHDPlusV2_us data file are located in the scripts.zip folder. To replicate the development process, run the following SAS scripts sequentially (1 - 18) in the listed order. Some scripts require user created ancillary information stored in .xlsx files (AREvents_final7.xlsx and div_modify.xlsx), and are noted below. These files and associated readme files for further explanation are located in the supplemental_files.zip file.
+
+All SAS scripts have extensive comment information regarding settings and function for the script. Please see these sections, grouped by /* and */ comment symbols  throughout the scripts for more details.
+
+1. make_nhdplusv2.sas - merges all downloaded NHDPlus files into single data set and generates compact values for from and to nodes.
+
+2. fix_nhdplusv2.sas - fills in missing values, fixes known errors.
+Attributes were renamed, duplicate observations removed, missing values corrected, revisions to routing including adjustments to diversion codes and fraction of flow diverted. These corrections are described in detail in the ENHDPlusV2_us metadata (Schwarz and Wieczorek, 2018) and in Brakebill and others, 2019).
+
+2a. Make a Backup of the network from above, called rnhdplusv2_us
+
+3. make_shapefile_selectpoints.sas - reads NHDPlusV2 flowline shapefiles and outputs point locations (lat/lon) of nodes and midpoint
+
+4. make_nhdplus_ifextterm.sas - reads NHD nodes lat/lon file from above (#3) and identifies flowlines that terminate at US border
+
+5. mod_nhdplus_arevents.sas - reads AREvents_final7.xlsx and modifies NHDPlus to account for AR events - creates new virtual flowlines for select transfers. Addition and removal (AR) events were documented in the file ARevents_final7.xlsx file and described. This file captures user determination of the location and amount of flow diverted as described in Brakebill and others, 2019. Not all attributes are preserved in the resulting E2NHDPlusV2_us file. These attributes are described in the .xlsx file AREvents.xlsx. Pesudo flowlines were added in AREvents_final7.xlsx so the routing could be included in the network routing. Pseudo flowlines were assigned COMIDs in a special range (less than -90000000) to distinguish them in the network from standard flowlines. Pseudo flowlines also were assigned a length of zero, the implication being that no instream losses could occur on the pseudo portion of the revised network, which would be consistent with the assumed properties of routed transfers. Multiple pseudo flowlines were permitted to merge either at a common node of the pseudo network or as discharge to a common node on the NHDPlusV2 network. From and To-nodes may be created to support the pseudo flowlines for routed transfers in the AR process. These nodes were assigned as the next sequential numbers beyond the maximum values of the both the compactified nodes and regular nodes. Therefore, these nodes are both unique and automatically compact. Disconnected AR withdrawal/discharge events (including non-routed transfers) were assumed to connect to the specific flowline they reference. ARQuantity describes the amount of flow withdrawn or diverted. Compact sequential hydrologic sequence values are assigned upstream order (largest value is upstream) and stored in  HYDROSEQ.  
+
+6. mod_nhdplus_routing.sas - reads div_modify.xlsx and modifies NHDPlus routing and diversions. Diversion affected flowlines were cataloged in the file div_modify.xlsx. This file documents a list of modified diversion codes and diversion fractions that were updated in the E2NHDPlusV2_us dataset. This file is created by the user, as described in Brakebill and others, 2019. The file is read by the SAS program mod_nhdplus_routing.sas, and alterations to the diversion code (divergence), the diversion fraction (DivFrac), and direction of flow (HYDROSEQ, from and to-nodes) are modified based on these values. Compact sequential hydrologic sequence values are assigned upstream order (largest value is upstream) and stored in  HYDROSEQ. Any additional updates to the network would require a new file created containing the modifications. See readme_diversion.txt in the supplemental_files.zip.
+
+7. make_nhdplus_usarea.sas - creates share (fraction) of incremental and cumulative area in US variables
+
+8. make_nhdplus_divvars.sas - creates the diversion affected flowline variables
+
+9. merge_nhdplus_files.sas  - merges ancillary data sets usarea divvars with nhdplus file (usarea divvars)
+
+10. make_nhdplus_totvars.sas - creates total and cumulative upstream variables [generates index files to speed subsequent processing]
+
+11. merge_nhdplus_files.sas  - Modify "%let ancil_files =" line to merge ancillary data set totvars with nhdplus file (totvars) created using previously run scripts noted above
+
+12. make_nhdplus_pctunrslvd.sas - creates variable percent unresolved area due to diversions
+
+13. make_nhdplus_vaavars.sas - creates value added attribute variables
+
+14. make_nhdplus_elevvars.sas - creates slope and elevation variables
+
+15. make_nhdplus_flowvel.sas - creates flow and velocity variables
+
+16. merge_nhdplus_files - Modify "%let ancil_files =" line to merge all (pctunrslvd vaavars elevvars flowvel) created using previously run scripts noted above
+
+17. make_nhdplus_regions.sas - creates regional breakout dbf files for use with GIS
+
+18. revise_postmod_nhdplus.sas - Alternatively, can execute scripts numbered 1-6 (noted above) individually and then run revise_postmod_nhdplus. Program combines individual programs to update subsets of NHDPlus variables in response to routing revisions implemented by the mod_nhdplusV2.sas program. 
+
+For additional modifications to routing or AR events (number 5 and 6 above), create new Excel files:
+div_modify.xlsx and AREvents_final7.xlsx containing only the new changes. Then
+run scripts 5 and 6 and then the revise_postmod_nhdplus.sas program (18).
+
+Details of methods are described in Brakebill and others, 2019, and in Schwarz and Wieczorek, 2018.</procdesc>
+        <srcused>Schwarz and Wieczorek, 2018.</srcused>
+        <procdate>20170102</procdate>
+        <proccont>
+          <cntinfo>
+            <cntperp>
+              <cntper>Gregory E Schwarz</cntper>
+              <cntorg>U.S. Geological Survey, WATER</cntorg>
+            </cntperp>
+            <cntpos>Economist</cntpos>
+            <cntaddr>
+              <addrtype>mailing address</addrtype>
+              <address>Mail Stop 413, 12201 Sunrise Valley Dr</address>
+              <city>Reston</city>
+              <state>VA</state>
+              <postal>20192</postal>
+              <country>United States</country>
+            </cntaddr>
+            <cntvoice>703-648-5718</cntvoice>
+            <cntfax>703-648-6693</cntfax>
+            <cntemail>gschwarz@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>e2nhdplusv2_us.csv.zip</enttypl>
+        <enttypd>Zipped Comma Separated Value (CSV) file containing data.</enttypd>
+        <enttypds>USGS Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>ComID</attrlabl>
+        <attrdef>Unique feature identifier from NHDPlus source data.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-92000204</rdommin>
+            <rdommax>948100740</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FL_ComID</attrlabl>
+        <attrdef>Unique identifier for flowline (negative FL_COMID = closed catchment) taken from source data item, COMID.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <udom></udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FL_GNIS_ID</attrlabl>
+        <attrdef>Flowline Geographic Names Information System Identifier (GNIS) taken from source data.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No data available</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <udom></udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FL_GNIS_Na</attrlabl>
+        <attrdef>GNIS name, specific term, or expression by which a flowline is known</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <udom>Name identified by GNIS. Some may be blank as the name may not be identified.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LENGTHKM</attrlabl>
+        <attrdef>Flowline length</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>95.714</rdommax>
+            <attrunit>kilomenters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>REACHCODE</attrlabl>
+        <attrdef>Unique flowline identifier. The first eight digits are the Watershed Boundary Dataset(WBD) HUC8.The next six digits are randomly assigned, sequential numbers that are unique within a HUC8.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1010002000000</rdommin>
+            <rdommax>18100204000000</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WB_Comid</attrlabl>
+        <attrdef>Unique identifier for waterbody taken from NHDWaterbody polygon table item, COMID.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>487</rdommin>
+            <rdommax>948100002</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FL_FCode</attrlabl>
+        <attrdef>Numeric code for flowline feature attributes; definitions for codes found in the NHDFCode lookup table.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <udom>55800 - ARTIFICIAL PATH, feature type only: no attributes
+33600 - CANAL/DITCH, feature type only: no attributes
+33601 - CANAL/DITCH, Canal/Ditch Type|aqueduct
+33603 - CANAL/DITCH, Canal/Ditch Type|stormwater
+56600 - COASTLINE, feature type only: no attributes
+33400 - CONNECTOR, feature type only: no attributes
+42800 - PIPELINE, feature type only: no attributes
+42801 - PIPELINE, Pipeline Type|aqueduct; Relationship to Surface|at or near
+42802 - PIPELINE, Pipeline Type|aqueduct; Relationship to Surface|elevated
+42803 - PIPELINE, Pipeline Type|aqueduct; Relationship to Surface|underground
+42804 - PIPELINE, Pipeline Type|aqueduct; Relationship to Surface|underwater
+42805 - PIPELINE, Pipeline Type|general case; Relationship to Surface|at or near
+42806 - PIPELINE, Pipeline Type|general case; Relationship to Surface|elevated
+42807 - PIPELINE, Pipeline Type|general case; Relationship to Surface|underground
+42808 - PIPELINE, Pipeline Type|general case; Relationship to Surface|underwater
+42809 - PIPELINE, Pipeline Type|penstock; Relationship to Surface|at or near
+42810 - PIPELINE, Pipeline Type|penstock; Relationship to Surface|elevated
+42811 - PIPELINE, Pipeline Type|penstock; Relationship to Surface|underground
+42812 - PIPELINE, Pipeline Type|penstock; Relationship to Surface|underwater
+42813 - PIPELINE, Pipeline Type|siphon; Relationship to Surface|unspecified
+42814 - PIPELINE, Pipeline Type|general case
+42815 - PIPELINE, Pipeline Type|penstock
+42816 - PIPELINE, Pipeline Type|aqueduct
+46000 - STREAM/RIVER, feature type only: no attributes
+46003 - STREAM/RIVER, Hydrographic Category|intermittent
+46006 - STREAM/RIVER, Hydrographic Category|perennial
+46007 - STREAM/RIVER, Hydrographic Category|ephemeral
+42000 - UNDERGROUND CONDUIT, feature type only: no attributes
+42001 - UNDERGROUND CONDUIT, Positional Accuracy|definite
+42002 - UNDERGROUND CONDUIT, Positional Accuracy|indefinite
+42003 - UNDERGROUND CONDUIT, Positional Accuracy|appoximate</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>nhdplusreg</attrlabl>
+        <attrdef>NHDPlus production region code.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <udom></udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FL_FTypeAb</attrlabl>
+        <attrdef>Unique identifier of a flowline feature type taken from NHDFlowline feature class.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>empty cell</edomv>
+            <edomvd>sink or water body</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>APath</edomv>
+            <edomvd>Artificial Path</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>ARevt</edomv>
+            <edomvd>Addition or Removal of water event.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Canal</edomv>
+            <edomvd>Canal, Ditch</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Cnnct</edomv>
+            <edomvd>Connector</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Coast</edomv>
+            <edomvd>Coastline</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pipe</edomv>
+            <edomvd>Pipeline</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Strm</edomv>
+            <edomvd>Stream, River</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IfWDig</attrlabl>
+        <attrdef>Flag denoting if flowline is in a digitized network, 0 is not in a digitized network; 1 is in a digitized network taken from NHDFlowline feature class item, "FlowDir," 1 = "with Digitized" and 0 = "Uninitialized.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>With digitized.</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>Uninitialized</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>StreamLeve</attrlabl>
+        <attrdef>Stream (flowline) level (lower valued stream levels are the mainstem and the higher valued stream levels are the tributaries, coast = 0, terminus = 1, ground/international border = 4).</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>21</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>StreamOrde</attrlabl>
+        <attrdef>Strahler Stream Order</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>10</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>StreamCalc</attrlabl>
+        <attrdef>Major path Strahler stream order, Coast = 0.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>10</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FromNode</attrlabl>
+        <attrdef>Original NHDPlusV2 from node identifier</attrdef>
+        <attrdefs>Source Data Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>10000001</rdommin>
+            <rdommax>840029231</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ToNode</attrlabl>
+        <attrdef>Original NHDPlusV2 to node identifier.</attrdef>
+        <attrdefs>Source Data Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>10000001</rdommin>
+            <rdommax>840020231</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Hydroseq</attrlabl>
+        <attrdef>Hydro sequence (upstream order) identifier</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>2691458</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LevelPathI</attrlabl>
+        <attrdef>Level path (Hydroseq number identifier for most downstream FL_COMID in path)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>630001574</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TerminalPa</attrlabl>
+        <attrdef>Hydroseq number identifier of terminal FL_COMID in path. Higher numbers in sequence denote upstream reaches and lower numbers in sequence denote downstream reaches.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>630001574</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TotLngthKm</attrlabl>
+        <attrdef>Total upstream flowline length in kilometers(km)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-9999</edomv>
+            <edomvd>missing area</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2306998.526</rdommax>
+            <attrunit>Kilometers</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Divergence</attrlabl>
+        <attrdef>Divergence code (0 for no diversion, 1 for primary pathway, and 2 for secondary pathway).</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Primary path</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>no diversion</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>primary path</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>secondary path</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>StartFlag</attrlabl>
+        <attrdef>If flowline is headwater</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>Non headwater</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Headwater</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TermFlag</attrlabl>
+        <attrdef>If terminate at coast/ground/border</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>non terminal transport flowline</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>terminal flowline</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FromMeas</attrlabl>
+        <attrdef>Reachcode measure at downstream node (0-100)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>100</rdommax>
+            <attrunit>percent of flowline length</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ToMeas</attrlabl>
+        <attrdef>Reachcode measure at upstream node (0-100)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Blank Field</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0094</rdommin>
+            <rdommax>100.0</rdommax>
+            <attrunit>percent of flowline length</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IncAreaKm2</attrlabl>
+        <attrdef>Incremental flowline drainage area (km2)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>65014.443</rdommax>
+            <attrunit>square Kilometer</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TotAreaKM2</attrlabl>
+        <attrdef>Total upstream area (km2)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>3133386.8865</rdommax>
+            <attrunit>square kilometer</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CumAreaKm2</attrlabl>
+        <attrdef>Cumulative div-based drainage area (km2)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>2878052.8463</rdommax>
+            <attrunit>square kilometer</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DivFrac</attrlabl>
+        <attrdef>Diversion fraction, estimated fraction of flow diverted through pathway.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>1.0</rdommax>
+            <attrunit>decimal fraction (percent)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MaxElRawCm</attrlabl>
+        <attrdef>Maximum catchment raw elevation (cm)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-8490</rdommin>
+            <rdommax>400113</rdommax>
+            <attrunit>centimeter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MinElRawCm</attrlabl>
+        <attrdef>Minimum catchment raw elevation (cm)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-8560</rdommin>
+            <rdommax>399338</rdommax>
+            <attrunit>centimeter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MaxElSmoCm</attrlabl>
+        <attrdef>Max catchment smoothed elevation (cm)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-8460.125601</rdommin>
+            <rdommax>400113</rdommax>
+            <attrunit>centimeter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MinElSmoCm</attrlabl>
+        <attrdef>Min catchment smoothed elevation (cm)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-8560</rdommin>
+            <rdommax>399338</rdommax>
+            <attrunit>centemeter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SLOPE</attrlabl>
+        <attrdef>Channel slope (vert length/horiz length)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>6.4746579877</rdommax>
+            <attrunit>ratio</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>HWNodeAKm2</attrlabl>
+        <attrdef>Area upstream of headwater node (km2)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>7982.6238</rdommax>
+            <attrunit>square kilometer</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CatAreaKm2</attrlabl>
+        <attrdef>Incremental catchment area (km2) including sinks</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>65014.443</rdommax>
+            <attrunit>square kilometer</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IfSink</attrlabl>
+        <attrdef>If closed catchment</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>No, not a sink</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Yes, sink or closed catchment</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PrecipV</attrlabl>
+        <attrdef>Mean annual precipitation (mm*100)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>669172</rdommax>
+            <attrunit>milimeter * 100</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TempV</attrlabl>
+        <attrdef>Mean annual temperature (deg C*100)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-493.368988</rdommin>
+            <rdommax>2542.840087</rdommax>
+            <attrunit>degree celsius *100)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RunOffV</attrlabl>
+        <attrdef>Mean annual runoff (mm)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>5693.899902</rdommax>
+            <attrunit>milimeter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MAFlowUcfs</attrlabl>
+        <attrdef>Cumulative mean annual flow using unit flow runoff method</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>696387.55528</rdommax>
+            <attrunit>cubic feet per second (CFS)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MAVelUfps</attrlabl>
+        <attrdef>Stream velocity at mean annual flow (f/s)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>11.269011145</rdommax>
+            <attrunit>feet per second (f/s)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IncFlwUcfs</attrlabl>
+        <attrdef>Incremental catchment mean annual flow (unit runoff method,cfs)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-21085.03407</rdommin>
+            <rdommax>45406.79952</rdommax>
+            <attrunit>cubic feet per second (CFS)</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WB_GNIS_ID</attrlabl>
+        <attrdef>Waterbody Geographic Names Information System (GNIS) identifier</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <udom></udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WB_GNIS_Na</attrlabl>
+        <attrdef>Waterbody GNIS name (&lt;=65 char)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <udom>Name of feature as defined by GNIS.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WB_AreaKm2</attrlabl>
+        <attrdef>Waterbody area (km2)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>57516.647</rdommax>
+            <attrunit>square kilometer</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WB_ElevaFt</attrlabl>
+        <attrdef>Waterbody elevation (f)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>-99999999</edomv>
+            <edomvd>No data</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>13101.64042</rdommax>
+            <attrunit>feet</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WB_FCode</attrlabl>
+        <attrdef>Waterbody feature code</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>30700</rdommin>
+            <rdommax>53700</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WB_FTypeAb</attrlabl>
+        <attrdef>Waterbody feature type abbreviation</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>nan</rdommin>
+            <rdommax>nan</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ifarea</attrlabl>
+        <attrdef>Flag to identify if source waterbody data were from the NHDAREA file</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>No</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Yes, waterbody data were from the NHDAREA file</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>alt_reg</attrlabl>
+        <attrdef>WB feature alternative NHDPlusreg in cases where waterbodies were in multiple regions</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <udom></udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>cfromnode</attrlabl>
+        <attrdef>Compactified from node</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>2</rdommin>
+            <rdommax>2634075</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ctonode</attrlabl>
+        <attrdef>compactified to node</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>2</rdommin>
+            <rdommax>2634075</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ARSrcReg</attrlabl>
+        <attrdef>Flag used to identify AR events that initiate outside the region to which the NHDComid flowline resides</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <udom>NHDPlusV2 production region code for the initial point of the event</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ARQuantity</attrlabl>
+        <attrdef>For withdrawal events (ToComid is blank), this is flow (cfs) removed from the FromComid; for transfer events with both FromComid and ToComid specified, this is the flow originally in FromComid that is routed through ToComid (note, it does not necessarily equal the flow in ToComid as there may be other upstream FromComid's that route to the same ToComid; for discharge to the non-virtual network (ToComid is &gt; 0), this is the flow added to ToComid (in addition to flow that is already in the ToComid).</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>.2</rdommin>
+            <rdommax>7343</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ARDivFrac</attrlabl>
+        <attrdef>Unconnected, withdrawal events (ARDWType = 1, 2, or 3), and equals the ratio of ARQuantity to ARQFrom. ARFrom is stored in the AREvents_Final7.xlsx user defined worksheet.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0033</rdommin>
+            <rdommax>1</rdommax>
+            <attrunit>ratio</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AREventCd</attrlabl>
+        <attrdef>Value is 1 if a routed transfer (transfer with either FromComid or ToComid in the -90000000s), 2 if withdrawal (public supply, irrigation, or non-routed transfer), and 3 if discharge (public supply, irrigation, or non-routed transfer).</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>a routed transfer (transfer with either FromComid or ToComid in the -90000000s)</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>withdrawal is public supply, irrigation, or non-routed transfer.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>discharge is public supply, irrigation, or non-routed transfer.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ARDWType</attrlabl>
+        <attrdef>Withdrawal/discharge type. (IfPublic = 1); 2 if  (IfIrr = 1); and 3 if a  (both IfPublic and IfIrr are 0).</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No withdrawal</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>Routed transfer</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Withdrawal/discharge is associated with public supply</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Withdrawal/discharge pertains to irrigation</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>non-routed transfer</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ARName</attrlabl>
+        <attrdef>Descriptive name for the AR event component.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <udom>Descriptive names for events</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IncUSArKm2</attrlabl>
+        <attrdef>Flowline catchment area in US</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>7984.0449</rdommax>
+            <attrunit>square kilometer</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IfExtTerm</attrlabl>
+        <attrdef>If flwline terminates at US border (0/1)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>does not terminate</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>terminates at border</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>orig_hydroseq</attrlabl>
+        <attrdef>Pre-modification hydro sequence</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>10000002</rdommin>
+            <rdommax>840029053</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>hydroseq20JAN17</attrlabl>
+        <attrdef>Archival version of HYDROSEQ as revisions were made as of January 20, 2017.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>2691458</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ModDivFrac</attrlabl>
+        <attrdef>Modified value of diversion fraction</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ModFDir</attrlabl>
+        <attrdef>If modified to reverse (correct) flow direction</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>flowline from and to nodes reversed in order to change direction of flow</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>divergence20JAN17</attrlabl>
+        <attrdef>Flag identifying diversion pathway, computed January 20, 2017.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>no diversion</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>primary path</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>secondary path</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>divfrac20JAN17</attrlabl>
+        <attrdef>Fraction of flow diverted, computation as of January 20, 2017.</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>no diversion</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>cumusarkm2</attrlabl>
+        <attrdef>Amount cumareakm2 (area) in US (km2)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2859336.5438</rdommax>
+            <attrunit>square kilometer</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>pctforgnar</attrlabl>
+        <attrdef>Percent cumareakm2 not in US (% Foreign drainage)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>100</rdommax>
+            <attrunit>percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ifintterm</attrlabl>
+        <attrdef>If flowline terminates to ground (0/1)</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>flowline does not terminate</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>flowline terminates to ground</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>termground</attrlabl>
+        <attrdef>If all downstream flowpaths terminate into the ground</attrdef>
+        <attrdefs>USGS  Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>all downstream flowlines do not terminate</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>all downstream flowlines terminate to the ground</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>divunrslvd</attrlabl>
+        <attrdef>If unresolved diversion path</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>diversion path resolved</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>diversion path not resolved</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>divmajorpa</attrlabl>
+        <attrdef>Flag noting if major path on a non-terminating flowline into the ground is on an unresolved diversion</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>No, major path on a non-terminating flowline into the ground is not on an unresolved diversion</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Yes, major path on a non-terminating flowline into the ground is on an unresolved diversion</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>div2ground</attrlabl>
+        <attrdef>Flag noting if a flowline terminates into the ground and has a non-terminating into the ground upstream of it</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>Does not terminate into ground, and does not have any flowlines upstream terminating into ground.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Flowline terminates to ground, and has upstream flowlines terminating to ground.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>divindetrm</attrlabl>
+        <attrdef>Flag identifies non-TermGround/non-DivUnrslvd flowlines that are on pathways that connect multiple Div2Ground flowlines that, themselves, intersect prior to interior termination</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>No</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Yes</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>divfrslvd</attrlabl>
+        <attrdef>Flag noting if divergence-affected flowline is resolved with modified DIVFRAC value</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>No, unresolved</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Yes, resolved</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>divgroup</attrlabl>
+        <attrdef>Hydro-independent diversion group id</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>Not part of diversion group</edomvd>
+            <edomvds>USGS defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>31222</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>pctunrslvd</attrlabl>
+        <attrdef>An index of uncertainty of flow due to unresolved diversions. The index is defined only for flowlines with Div2Ground equal to 0 and is equal to 100 times the difference between total upstream area (given by the NHDPlusV2 TotAreaKm2 variable) and the cumulative upstream area</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>99.995</rdommax>
+            <attrunit>Index</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>mthd_slope</attrlabl>
+        <attrdef>Flag to identify method used to compute slope</attrdef>
+        <attrdefs>USGS Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;&lt; empty cell &gt;&gt;</edomv>
+            <edomvd>No Data</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>slope was determined directly by elevations at both the upstream and downstream node – the case where both nodes are set points</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>slope was estimated by interpolation, where at least one of the flowline’s nodes is not a set point</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>slope was estimated by the regression method</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey</cntorg>
+          <cntper>GS ScienceBase</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Digital Data</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/P986KZEM</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20200820</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>John W Brakebill</cntper>
+          <cntorg>U.S. Geological Survey, Northeast Region</cntorg>
+        </cntperp>
+        <cntpos>Supervisory Geographer</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>5522 Research Park Drive</address>
+          <city>Baltimore</city>
+          <state>MD</state>
+          <postal>21228</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>443-498-5557</cntvoice>
+        <cntfax>443-498-5510</cntfax>
+        <cntemail>jwbrakeb@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Biological Data Profile of the Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001.1-1999</metstdv>
+  </metainfo>
+</metadata>

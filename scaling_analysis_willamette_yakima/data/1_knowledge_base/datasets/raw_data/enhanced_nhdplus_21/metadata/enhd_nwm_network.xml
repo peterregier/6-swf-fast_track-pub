@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>David L. Blodgett</origin>
+        <pubdate>20230124</pubdate>
+        <title>Updated CONUS river network attributes based on the E2NHDPlusV2 and NWMv2.1 networks (ver. 2.0, February 2023)</title>
+        <edition>Version 2.0 - A bug in a data processing workflow was fixed. The code in question was not applying all diversion changes from the E2NHDPlusV2 dataset. The change results in many of the diversion alterations from the E2NHDPlusV2 dataset being included and, as a result, many of the derived network attributes have changed. This change has no structural or functional impact on the dataset. However, primary paths downstream through diversions and upstream through confluences have been altered in many places. First release: September 2022 (version 1). Revised: December 2022 (version 2.0).</edition>
+        <geoform>tabular digital data</geoform>
+        <onlink>https://doi.org/10.5066/P976XCVT</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>The comid field of these data can be used to join to the National Hydrography Dataset Plus V2.1 (NHDPlusV2) flowline comid or catchment featureid attributes. The included attributes follow the same data model as the NHDPlusV2 but include numerous updates and improvements to network connectivity. All attributes that depend on network connectivity have been recalculated.
+
+These attributes are based on the NHDPlusV2 network geometry and modifications retrieved from the National Water Model V2.1 (NWMv2.1) and "E2NHDPlusV2_us: Database of Ancillary Hydrologic Attributes and Modified Routing for NHDPlus Version 2.1 Flowlines" (E2NHDPlusV2) datasets. The attributes included are: comid, tocomid, fcode, nameID, lengthkm, reachcode, frommeas, tomeas, arbolate_sum, terminalpa ,hydroseq, levelpathi, pathlength, dnhydroseq, areasqkm, totdasqkm, terminalfl, dnlevelpat. These attributes are available in three formats: csv, fst, and parquet. "fst" is a high-performance format for use with the R programming language "fst" package. "parquet" is a high-performance format for use with multiple programming languages (including python) that support the Apache Arrow Parquet format.</abstract>
+      <purpose>These data are part of a broader reference hydrologic geospatial fabric being developed in support of national integrated hydrologic modelling and data integration.</purpose>
+      <supplinf>As noted below, many of these are derived directly from the NHDPlusV2 database. Others are selectively overridden according to modifications found in the NWMv2.1 and E2NHDPlusV2, and some have been recalculated based on algorithms defined in the NHDPlusV2 user's manual and implemented in the nhdplusTools R package.
+
+References:  
+NHDPlusV2: https://www.epa.gov/waterdata/get-nhdplus-national-hydrography-dataset-plus-data 
+nhdplusTools: https://doi.org/10.5066/P97AS8JD 
+E2NHDPlusV2: https://doi.org/10.5066/p986kzem 
+NWMv2.1: https://www.nohrsc.noaa.gov/pub/staff/keicher/NWM_live/NWM_parameters/ 
+
+Included Attributes:  
+comid: integer derived from NHDPlusV2, 
+tocomid: integer derived from tonode/fromnode topology of NHDPlusV2, E2NHDPlusV2, and tocomid attributes of the NWMv2.1 routelink file,
+fcode: integer derived from NHDPlusV2,
+gnis_id: integer GNIS_ID derived from NHDPlusV2, 
+reachcode: character derived from NHDPlusV2, 
+frommeas: numeric derived from NHDPlusV2, 
+tomeas: numeric derived from NHDPlusV2, 
+lengthkm: numeric derived from NHDPlusV2, 
+arbolate_sum: numeric recalculated with nhdplusTools,
+areasqkm: numeric derived from NHDPlusV2, 
+totdasqkm: numeric recalculated with nhdplusTools, 
+hydroseq: integer recalculated with nhdplusTools, 
+dnhydroseq:  integer recalculated with nhdplusTools,
+levelpathi:  integer recalculated with nhdplusTools, 
+dnlevelpat: integer recalculated with nhdplusTools,
+terminalpa: integer recalculated with nhdplusTools,
+terminalfl: integer (1 or 0) recalculated with nhdplusTools,
+pathlength: numeric recalculated with nhdplusTools.
+streamleve: integer recalculated with nhdplusTools.
+streamorde: integer recalculated with nhdplusTools.
+vpuin: logical derived from NHDPlusV2,
+vpuout: logical derived from NHDPlusV2,
+wbareatype: character derived from NHDPlusV2, 
+slope: numeric derived from NHDPlusV2, 
+slopelenkm: numeric derived from NHDPlusV2, 
+ftype: character derived from NHDPlusV2, 
+gnis_name: character derived from NHDPlusV2, 
+gnis_id: integer derived from NHDPlusV2,
+wbareacomi: integer derived from NHDPlusV2,
+hwnodesqkm: numeric derived from NHDPlusV2, 
+rpuid: character derived from NHDPlusV2, 
+vpuid: character derived from NHDPlusV2, 
+roughness: numeric derived from NHDPlusV2</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20220510</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>publication date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-125.5078</westbc>
+        <eastbc>-65.3906</eastbc>
+        <northbc>49.6107</northbc>
+        <southbc>24.2069</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>inlandWaters</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>hydrology</themekey>
+        <themekey>hydrography</themekey>
+        <themekey>network</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:63cb311ed34e06fef14f40a3</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Conterminous US</placekey>
+      </place>
+    </keywords>
+    <accconst>None.  Please see 'Distribution Info' for details.</accconst>
+    <useconst>None.  Users are advised to read the dataset's metadata thoroughly to understand appropriate use and data limitations.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>David L Blodgett</cntper>
+          <cntorg>U.S. Geological Survey, WATER</cntorg>
+        </cntperp>
+        <cntpos>Civil Engineer</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>One Gifford Pinchot Drive</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53726</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>608-628-5855</cntvoice>
+        <cntemail>dblodgett@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>All values physical (length and area) attributes were derived from NHDPlusV2. Topological connectivity updates derived from E2NHDPlusV2 and NWMv2.1 are documented as part of those data sources.</attraccr>
+    </attracc>
+    <logic>These data have been tested rigorously and used for numerous value-adding data processing workflows.</logic>
+    <complete>These data are complete in that they include all NHDPlusV2 network flowlines. The NHDPlusV2 does not include complete coverage for watersheds outside of the coterminous US.</complete>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Lucinda McKay</origin>
+            <pubdate>20150101</pubdate>
+            <title>NHD Plus Version 2</title>
+            <geoform>vector digital data</geoform>
+            <onlink>https://www.epa.gov/waterdata/get-nhdplus-national-hydrography-dataset-plus-data</onlink>
+          </citeinfo>
+        </srccite>
+        <srcscale>100000</srcscale>
+        <typesrc>Digital</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20150101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>NHDPlusV2</srccitea>
+        <srccontr>Primary source of network attributes</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Greg Schwarz</origin>
+            <pubdate>2019</pubdate>
+            <title>E2NHDPlusV2_us: Database of Ancillary Hydrologic Attributes and Modified Routing for NHDPlus Version 2.1 Flowlines</title>
+            <geoform>tabular digital data</geoform>
+            <pubinfo>
+              <pubplace>https://www.sciencebase.gov</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.5066/p986kzem</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20191206</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>E2NHDPlusV2</srccitea>
+        <srccontr>Source of updated network topology</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>NOAA Office of Water Prediction</origin>
+            <pubdate>20210414</pubdate>
+            <title>NWMv2.1 Parameter Files</title>
+            <geoform>tabular digital data</geoform>
+            <onlink>https://www.nohrsc.noaa.gov/pub/staff/keicher/NWM_live/NWM_parameters/</onlink>
+            <onlink>https://www.nohrsc.noaa.gov/pub/staff/keicher/NWM_live/NWM_parameters/NWM_parameter_files_v2.1.tar.gz</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20210414</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>NWMv2.1</srccitea>
+        <srccontr>Source of updated network topology.</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>Load and normalize data. Attribute names aligned and unneeded content removed.</procdesc>
+        <srcused>NHDPlusV2</srcused>
+        <srcused>NWMv2.1</srcused>
+        <srcused>E2NHDPlusV2</srcused>
+        <procdate>20220101</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Cleaned up network, added tocomid from tonode/fromnode topology, removed unwanted modifications from E2NHDPlusV2 and NWMv2.1.</procdesc>
+        <procdate>20220101</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Used nhdplusTools to add plus network attributes.
+
+Blodgett, D., Johnson, J.M., 2022, nhdplusTools: Tools for
+Accessing and Working with the NHDPlus,
+https://doi.org/10.5066/P97AS8JD</procdesc>
+        <procdate>20220101</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Basic QA/QC to verify data fall in expected ranges and that there are no missing or invalid values are included.</procdesc>
+        <procdate>20220101</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Created additional file formats of csv data (fst and parquet). fst for fast access in R and parquet for portable fast data access.</procdesc>
+        <procdate>20220101</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>enhd_nhdplusatts.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing all attributes generated by workflow.</enttypd>
+        <enttypds>U.S. Geological Survey</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>comid</attrlabl>
+        <attrdef>integer derived from NHDPlusV2</attrdef>
+        <attrdefs>NHDPlusV2</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>101</rdommin>
+            <rdommax>948100740</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>tocomid</attrlabl>
+        <attrdef>integer derived from tonode/fromnode topology of NHDPlusV2, E2NHDPlusV2, and tocomid attributes of the NWMv2.1 routelink file</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>948100740</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>fcode</attrlabl>
+        <attrdef>integer derived from NHDPlusV2</attrdef>
+        <attrdefs>NHDPlusV2</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>46003</edomv>
+            <edomvd>STREAM/RIVER Hydrographic Category: intermittent</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>46006</edomv>
+            <edomvd>STREAM/RIVER Hydrographic Category: perennial</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>55800</edomv>
+            <edomvd>ARTIFICIAL PATH</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>33400</edomv>
+            <edomvd>CONNECTOR</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>33600</edomv>
+            <edomvd>CANAL/DITCH</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>46000</edomv>
+            <edomvd>STREAM/RIVER</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>46007</edomv>
+            <edomvd>STREAM/RIVER Hydrographic Category: ephemeral</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42813</edomv>
+            <edomvd>PIPELINE Product: water; Pipeline Type: siphon; Relationship to Surface: unspecified</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42800</edomv>
+            <edomvd>PIPELINE</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42809</edomv>
+            <edomvd>PIPELINE Product: water; Pipeline Type: penstock; Relationship to Surface: at or near</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42803</edomv>
+            <edomvd>PIPELINE Product: water; Pipeline Type: aqueduct; Relationship to Surface: underground</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42801</edomv>
+            <edomvd>PIPELINE Product: water; Pipeline Type: aqueduct; Relationship to Surface: at or near</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>33601</edomv>
+            <edomvd>CANAL/DITCH Canal/Ditch Type: aqueduct</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>33603</edomv>
+            <edomvd>CANAL/DITCH Canal/Ditch Type: stormwater</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42807</edomv>
+            <edomvd>PIPELINE Product: water; Pipeline Type: general case; Relationship to Surface: underground</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42816</edomv>
+            <edomvd>PIPELINE Product: water; Pipeline Type: aqueduct</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42820</edomv>
+            <edomvd>PIPELINE Product: water; Pipeline Type: Stormwater</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42805</edomv>
+            <edomvd>PIPELINE Product: water; Pipeline Type: general case; Relationship to Surface: at or near</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42823</edomv>
+            <edomvd>PIPELINE Product: water; Pipeline Type: Stormwater; Relationship to Surface: Underground</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>42802</edomv>
+            <edomvd>PIPELINE Product: water; Pipeline Type: aqueduct; Relationship to Surface: elevated</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>gnis_id</attrlabl>
+        <attrdef>integer GNIS_ID derived from NHDPlusV2</attrdef>
+        <attrdefs>NHDPlusV2</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>399</rdommin>
+            <rdommax>2559129</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>reachcode</attrlabl>
+        <attrdef>character derived from NHDPlusV2 REACHCODE</attrdef>
+        <attrdefs>NHDPlusV2</attrdefs>
+        <attrdomv>
+          <udom>Joins to the REACHCODE attribute of nhdpusV2</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>frommeas</attrlabl>
+        <attrdef>numeric derived from NHDPlusV2</attrdef>
+        <attrdefs>NHDPlusV2</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>100</rdommax>
+            <attrunit>percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>tomeas</attrlabl>
+        <attrdef>numeric derived from NHDPlusV2</attrdef>
+        <attrdefs>NHDPlusV2</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>100</rdommax>
+            <attrunit>percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>lengthkm</attrlabl>
+        <attrdef>numeric derived from NHDPlusV2</attrdef>
+        <attrdefs>NHDPlusV2</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.001</rdommin>
+            <rdommax>95.714</rdommax>
+            <attrunit>km</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>arbolate_su</attrlabl>
+        <attrdef>numeric recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.001</rdommin>
+            <rdommax>2137001</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>areasqkm</attrlabl>
+        <attrdef>numeric derived from NHDPlusV2</attrdef>
+        <attrdefs>NHDPlusV2</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.00</rdommin>
+            <rdommax>65014</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>totdasqkm</attrlabl>
+        <attrdef>numeric recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2881158.8</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>hydroseq</attrlabl>
+        <attrdef>integer recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>2667754</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>dnhydroseq</attrlabl>
+        <attrdef>integer recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2667752</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>levelpathi</attrlabl>
+        <attrdef>integer recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>2667753</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>dnlevelpat</attrlabl>
+        <attrdef>integer recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>2667752</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>terminalpa</attrlabl>
+        <attrdef>integer recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>2667752</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>terminalfl</attrlabl>
+        <attrdef>integer (1 or 0) recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>terminal flowline</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>non-terminal flowline</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>pathlength</attrlabl>
+        <attrdef>numeric recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>6043</rdommax>
+            <attrunit>km</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>streamleve</attrlabl>
+        <attrdef>integer recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>13</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>streamorde</attrlabl>
+        <attrdef>integer recalculated with nhdplusTools</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1</rdommin>
+            <rdommax>10</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>vpuin</attrlabl>
+        <attrdef>integer 0 or 1 indicates if flowline is an inflow to a vpu</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>vpuout</attrlabl>
+        <attrdef>integer 0 or 1 indicates if flowline is an outflow from a vpu</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>1</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>wbareatype</attrlabl>
+        <attrdef>character indicates the type of the waterbody a flowline is related to. Flowlines not related to a waterbody are NA.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>StreamRiver</edomv>
+            <edomvd>Stream or River</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>CanalDitch</edomv>
+            <edomvd>Canal or Ditch</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>LakePond</edomv>
+            <edomvd>Lake or Pond</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Wash</edomv>
+            <edomvd>Wash</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Reservoir</edomv>
+            <edomvd>Reservoir</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Area of Complex Channels</edomv>
+            <edomvd>Area of Complex Channels</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>slope</attrlabl>
+        <attrdef>numeric average slope of flowline</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-9998</rdommin>
+            <rdommax>4.6</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>slopelenkm</attrlabl>
+        <attrdef>numeric length used for slope calculation</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.001</rdommin>
+            <rdommax>95.714</rdommax>
+            <attrunit>km</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ftype</attrlabl>
+        <attrdef>Feature type of flowline</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>StreamRiver</edomv>
+            <edomvd>Stream or River</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>CanalDitch</edomv>
+            <edomvd>Canal or Ditch</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Artificial Path</edomv>
+            <edomvd>Artificial Path</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Connector</edomv>
+            <edomvd>Connector</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pipeline</edomv>
+            <edomvd>Pipeline</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>gnis_name</attrlabl>
+        <attrdef>character GNIS Name</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>GNIS Names, flowlines with no name are null</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>gnis_id</attrlabl>
+        <attrdef>integer GNIS ID -- flowlines with no name are null</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>399</rdommin>
+            <rdommax>2559129</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>wbareacomi</attrlabl>
+        <attrdef>comid of water body the flowline associates to</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-9999</rdommin>
+            <rdommax>948100002</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>hwnodesqkm</attrlabl>
+        <attrdef>drainage area at the upstream node of a first order flowline</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>7982.6238</rdommax>
+            <attrunit>square km</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>rpuid</attrlabl>
+        <attrdef>character identifier for raster processing unit flowline belongs to. nulls are null in source data.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Raster Processing Unit</edomv>
+            <edomvd>Raster Processing Unit</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>18c</edomv>
+            <edomvd>Raster Processing Unit 18c</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>18b</edomv>
+            <edomvd>Raster Processing Unit 18b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>18a</edomv>
+            <edomvd>Raster Processing Unit 18a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>14a</edomv>
+            <edomvd>Raster Processing Unit 14a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>14b</edomv>
+            <edomvd>Raster Processing Unit 14b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>15b</edomv>
+            <edomvd>Raster Processing Unit 15b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>15a</edomv>
+            <edomvd>Raster Processing Unit 15a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>16b</edomv>
+            <edomvd>Raster Processing Unit 16b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>16a</edomv>
+            <edomvd>Raster Processing Unit 16a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>04b</edomv>
+            <edomvd>Raster Processing Unit 04b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>04d</edomv>
+            <edomvd>Raster Processing Unit 04d</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>04c</edomv>
+            <edomvd>Raster Processing Unit 04c</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>04a</edomv>
+            <edomvd>Raster Processing Unit 04a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>02b</edomv>
+            <edomvd>Raster Processing Unit 02b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>02a</edomv>
+            <edomvd>Raster Processing Unit 02a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>05d</edomv>
+            <edomvd>Raster Processing Unit 05d</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>05c</edomv>
+            <edomvd>Raster Processing Unit 05c</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>05a</edomv>
+            <edomvd>Raster Processing Unit 05a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>05b</edomv>
+            <edomvd>Raster Processing Unit 05b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>06a</edomv>
+            <edomvd>Raster Processing Unit 06a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>07c</edomv>
+            <edomvd>Raster Processing Unit 07c</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>07b</edomv>
+            <edomvd>Raster Processing Unit 07b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>07a</edomv>
+            <edomvd>Raster Processing Unit 07a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>03g</edomv>
+            <edomvd>Raster Processing Unit 03g</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>08b</edomv>
+            <edomvd>Raster Processing Unit 08b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>08a</edomv>
+            <edomvd>Raster Processing Unit 08a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10c</edomv>
+            <edomvd>Raster Processing Unit 10c</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10d</edomv>
+            <edomvd>Raster Processing Unit 10d</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10b</edomv>
+            <edomvd>Raster Processing Unit 10b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10a</edomv>
+            <edomvd>Raster Processing Unit 10a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10i</edomv>
+            <edomvd>Raster Processing Unit 10i</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10h</edomv>
+            <edomvd>Raster Processing Unit 10h</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10g</edomv>
+            <edomvd>Raster Processing Unit 10g</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10f</edomv>
+            <edomvd>Raster Processing Unit 10f</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10e</edomv>
+            <edomvd>Raster Processing Unit 10e</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>11c</edomv>
+            <edomvd>Raster Processing Unit 11c</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>11d</edomv>
+            <edomvd>Raster Processing Unit 11d</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>11b</edomv>
+            <edomvd>Raster Processing Unit 11b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>11a</edomv>
+            <edomvd>Raster Processing Unit 11a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>01a</edomv>
+            <edomvd>Raster Processing Unit 01a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>17b</edomv>
+            <edomvd>Raster Processing Unit 17b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>17a</edomv>
+            <edomvd>Raster Processing Unit 17a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>17c</edomv>
+            <edomvd>Raster Processing Unit 17c</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>17d</edomv>
+            <edomvd>Raster Processing Unit 17d</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>13a</edomv>
+            <edomvd>Raster Processing Unit 13a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>13b</edomv>
+            <edomvd>Raster Processing Unit 13b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>13c</edomv>
+            <edomvd>Raster Processing Unit 13c</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>13d</edomv>
+            <edomvd>Raster Processing Unit 13d</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>03a</edomv>
+            <edomvd>Raster Processing Unit 03a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>03b</edomv>
+            <edomvd>Raster Processing Unit 03b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>03c</edomv>
+            <edomvd>Raster Processing Unit 03c</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>03d</edomv>
+            <edomvd>Raster Processing Unit 03d</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>03e</edomv>
+            <edomvd>Raster Processing Unit 03e</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>03f</edomv>
+            <edomvd>Raster Processing Unit 03f</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>09a</edomv>
+            <edomvd>Raster Processing Unit 09a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>12a</edomv>
+            <edomvd>Raster Processing Unit 12a</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>12b</edomv>
+            <edomvd>Raster Processing Unit 12b</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>12c</edomv>
+            <edomvd>Raster Processing Unit 12c</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>12d</edomv>
+            <edomvd>Raster Processing Unit 12d</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>vpuid</attrlabl>
+        <attrdef>character identifier for vector processing unit flowline belongs to</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>18</edomv>
+            <edomvd>Vector Processing Unit 18</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>14</edomv>
+            <edomvd>Vector Processing Unit 14</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>15</edomv>
+            <edomvd>Vector Processing Unit 15</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>16</edomv>
+            <edomvd>Vector Processing Unit 16</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>04</edomv>
+            <edomvd>Vector Processing Unit 04</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>02</edomv>
+            <edomvd>Vector Processing Unit 02</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>05</edomv>
+            <edomvd>Vector Processing Unit 05</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>06</edomv>
+            <edomvd>Vector Processing Unit 06</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>07</edomv>
+            <edomvd>Vector Processing Unit 07</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>08</edomv>
+            <edomvd>Vector Processing Unit 08</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10L</edomv>
+            <edomvd>Vector Processing Unit 10L</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10U</edomv>
+            <edomvd>Vector Processing Unit 10U</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>11</edomv>
+            <edomvd>Vector Processing Unit 11</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>01</edomv>
+            <edomvd>Vector Processing Unit 01</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>17</edomv>
+            <edomvd>Vector Processing Unit 17</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>13</edomv>
+            <edomvd>Vector Processing Unit 13</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>03N</edomv>
+            <edomvd>Vector Processing Unit 03N</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>03S</edomv>
+            <edomvd>Vector Processing Unit 03S</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>03W</edomv>
+            <edomvd>Vector Processing Unit 03W</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>09</edomv>
+            <edomvd>Vector Processing Unit 09</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>12</edomv>
+            <edomvd>Vector Processing Unit 12</edomvd>
+            <edomvds>NHDPlusV2</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>roughness</attrlabl>
+        <attrdef>numeric Manning's N estimate for flowline</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0034</rdommin>
+            <rdommax>2.0159</rdommax>
+            <attrunit>Mannings N</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>U.S. Geological Survey</cntorg>
+          <cntper>GS ScienceBase</cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Digital Data</formname>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/P976XCVT</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20230201</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>David L Blodgett</cntper>
+          <cntorg>U.S. Geological Survey, WATER</cntorg>
+        </cntperp>
+        <cntpos>Civil Engineer</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>One Gifford Pinchot Drive</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53726</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>608-628-5855</cntvoice>
+        <cntemail>dblodgett@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

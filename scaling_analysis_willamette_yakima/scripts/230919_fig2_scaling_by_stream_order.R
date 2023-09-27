@@ -33,13 +33,13 @@ ggplot(df, aes(as.factor(stream_order), totco2g_m2_day)) +
 
 ## Skipped head to see how good things look and they look GOOD!
 ggplot(data = df,
-       aes(x = accm_wshd_area_km2,
-           y = accm_totco2g_day / accm_stream_area_m2))+
-  geom_point()+
-  scale_x_log10()+
-  scale_y_log10()+
-  xlab(expression(bold(paste("Watershed area"," ","(",km^2,")"))))+
-  ylab(expression(bold(paste("Local respiration rates"," ","(",gCO[2]*m^-2*d^-1,")"))))+
+       aes(x = wshd_area_km2,
+           y = accm_totco2g_day / wshd_area_km2))+
+  geom_point(alpha = 0.1) +
+  scale_x_log10() +
+  scale_y_log10() +
+  xlab(expression(bold(paste("Watershed area"," ","(",km^2,")")))) +
+  ylab(expression(bold(paste("Local respiration rates"," ","(",gCO[2]*m^-2*d^-1,")")))) +
   facet_wrap(~basin, ncol = 2)
 
 

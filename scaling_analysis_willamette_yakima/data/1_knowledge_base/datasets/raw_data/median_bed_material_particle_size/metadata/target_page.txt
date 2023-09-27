@@ -1,0 +1,20 @@
+
+        June 9, 2021
+          
+Dataset
+          
+
+Open Access
+
+        
+      
+A national map of riverine median bed-material particle size over CONUS
+
+
+Hong-Yi Li; 
+Guta Abeshu; 
+Zhenduo Zhu; 
+Zeli Tan; 
+L. Ruby Leung
+This is a vector-format map (polyline shapefiles) of the median bed-material sediment particle size (D50) over the contiguous United States. This map is derived by combining the USGS sediment observations, the channel and watershed characteristics from two existing datasets (medium-resolution NHDplus and ScienceBase), and state-of-the-art machine learning techniques. 
+  Powered by CERN Data Centre & Invenio.

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Wieczorek, Michael E.</origin>
+        <origin>Jackson, Shannon</origin>
+        <pubdate>2019</pubdate>
+        <title>Attributes for NHDPlus Version 2.1 Flowlines for the Conterminous United States: Bankfull Hydraulic Geometry Related to Physiographic Divisions</title>
+        <geoform>Tabular</geoform>
+        <onlink>https://doi.org/10.5066/F7765D7V</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This tabular data set contains information on bankfull depth, width and cross-sectional area for each NHDPlus version 2.1 data suite (NHDPlusv2) flowline (Moore and Dewald, 2016) for the conterminous United States.  These data were created using regional regression equations outlined in Bieger and others (2015). The equations predict bankfull width, depth and cross-sectional area as a function of drainage area for eight Physiographic Divisions of the conterminous United States (Fenneman, 1946).</abstract>
+      <purpose>This data set was created by the U.S. Geological Survey's (USGS) National Water-Quality Assessment Project (NAWQA) which is part of the USGS National Water Quality Program (NWQP).  This effort was undertaken to estimate the Bankfull Hydraulic Geometry for NHDPlusV2 flowline catchments and upstream river networks to support statistical analysis, map display, and model parameterization.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20140430</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>publication date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>Not planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-127.00195312352</westbc>
+        <eastbc>-65.654296875972</eastbc>
+        <northbc>50.819541845687</northbc>
+        <southbc>24.80628419428</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>streams</themekey>
+        <themekey>bankfull channel area</themekey>
+        <themekey>bankfull discharge</themekey>
+        <themekey>bankfull width</themekey>
+        <themekey>flowline</themekey>
+        <themekey>NHDPlus version 2</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:5cf02bdae4b0b51330e22b85</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Conterminous United States</placekey>
+      </place>
+    </keywords>
+    <accconst>none</accconst>
+    <useconst>none</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Michael E Wieczorek</cntper>
+          <cntorg>U.S. Geological Survey, Northeast Region</cntorg>
+        </cntperp>
+        <cntpos>Geographer</cntpos>
+        <cntaddr>
+          <addrtype>mailing address</addrtype>
+          <address>5522 Research Park Drive</address>
+          <city>Baltimore</city>
+          <state>MD</state>
+          <postal>21228</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>443-498-5550</cntvoice>
+        <cntfax>443-498-5510</cntfax>
+        <cntemail>mewieczo@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <crossref>
+      <citeinfo>
+        <origin>Katrin Bieger</origin>
+        <origin>Hendrik Rathjens</origin>
+        <origin>Peter M. Allen</origin>
+        <origin>Jeffrey G. Arnold</origin>
+        <pubdate>2015</pubdate>
+        <title>Development and Evaluation of Bankfull Hydraulic Geometry Relationships for the Physiographic Regions of the United States</title>
+        <geoform>Paper</geoform>
+        <pubinfo>
+          <pubplace>Journal of the American Water Resources Association</pubplace>
+          <publish>American Water Resources Association</publish>
+        </pubinfo>
+        <onlink>http://onlinelibrary.wiley.com/doi/10.1111/jawr.12282/full</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Richard B. Moore</origin>
+        <origin>Thomas G. Dewald</origin>
+        <pubdate>2016</pubdate>
+        <title>The Road to NHDPlus-Advancements in Digital Stream Networks and Associated Catchments</title>
+        <geoform>publication</geoform>
+        <pubinfo>
+          <pubplace>American Water Resources Association</pubplace>
+          <publish>(JAWRA) 1-10.DOI: 10.1111/1752-1688.12389</publish>
+        </pubinfo>
+        <onlink>http://dx.doi.org/10.1111/1752-1688.12389</onlink>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>Results were quality controlled and assured by randomly selecting a USGS surface water gage, determining the COMID associated with that gage, using the USGS' National Water Inventory System (NWIS) to pull Field Measurement data of channel width, channel area and discharge, and comparing to the results of the regression equations. Results showed the calculated values presented here fall within the range of values found on NWIS.</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted</logic>
+    <complete>Data set is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>No formal positional accuracy tests were conducted</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>No formal positional accuracy tests were conducted</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>N.M. Fenneman</origin>
+            <origin>D.W. Johnson</origin>
+            <pubdate>1946</pubdate>
+            <title>Physiographic provinces of the conterminous U.S.</title>
+            <geoform>raster digital data</geoform>
+            <pubinfo>
+              <pubplace>Reston, Virginia</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://water.usgs.gov/GIS/metadata/usgswrd/XML/physio.xml</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>online</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>1946</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Physiographic provinces of the conterminous U. S.</srccitea>
+        <srccontr>The source data provided information on physiographic provinces.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>U.S. Environmental Protection</origin>
+            <origin>U.S. Geological Survey</origin>
+            <pubdate>2012</pubdate>
+            <title>National Hydrography Dataset Plus Version 2.1</title>
+            <geoform>vector digital data</geoform>
+            <pubinfo>
+              <pubplace>Reston, VA</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>http://www.horizon-systems.com/NHDPlus/NHDPlusV2_data.php</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>online</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>2012</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>NHDPlus</srccitea>
+        <srccontr>The source data is the basic hydrologic framework used to process  these data.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Gregory E. Schwarz</origin>
+            <origin>Michael E. Wieczorek</origin>
+            <pubdate>20181001</pubdate>
+            <title>Database of modified routing for NHDPlus version 2.1 flowlines: ENHDPlusV2_us</title>
+            <geoform>tabular data</geoform>
+            <pubinfo>
+              <pubplace>Reston, VA</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.5066/P9PA63SM</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>online</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20181001</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>nhdplusus_v2.sas</srccitea>
+        <srccontr>The source data provided routing information for the NHDPlusV2 flow line network.</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>(1) Created integer field within the physiographic divisions shapefile. Assigned integer representation of each physiographic division (1-8) as follows:
+DIVISION	DIV
+APPALACHIAN HIGHLANDS-1
+ATLANTIC PLAIN-2
+INTERIOR HIGHLANDS-3
+INTERIOR PLAINS-4
+INTERMONTANE PLATEAUS-5
+LAURENTIAN UPLAND-6
+PACIFIC MOUNTAIN SYSTEM-7
+ROCKY MOUNTAIN SYSTEM-8
+(2) Converted physiographic divisions shapefile to a 30 meter resolution raster using Polygon to Raster tool assigning the physiographic divisions integer field (Divcode) as the target field.
+(3) Assigned physiographic divisions to NHDPlusV2 regional catchment rasters using the Combine tool.
+(4) Converted raster output VATs from Step 3 into dbf files using Table to Table Conversion tool.
+(5) Transposed dbf files using SAS to calculate the division area in each NHDPlusV2 catchment (cell resolution = 30 meters, multiply each unique DivCode/NHDPlusV2 combination cell count by 900 to calculate area in km2)
+(6) Calculated percent area of each division per catchment. Most catchments fall in only one division and have a percent area equal to 100%, however catchments falling on the boundaries of divisions will have multiple divisions of less than 100%.
+(7) Used the dbf files created in Step 6 as input to the SAS NHDPlus network accumulation program (Schwarz and Wieczorek, 2018) to calculate total upstream division percentages and catchment drainage area.
+(8) Used regression equations cited in Bieger et al (2015) to calculate catchment bankfull width, depth, and cross sectional area. For catchments located in more than one division, each was calculated and multiplied by the weight of that division (as defined by 0 -1; 1 being 100%) and summed. 
+(9)  Results were QAQC-ed by randomly picking a USGS surface water gage, determining the COMID associated with that gage, using the USGS' National Water Inventory System (NWIS) to pull Field Measurement data of channel width, channel area and discharge, and comparing to the results of the regression equations. Results showed the calculated values presented here fall within the range of values found on NWIS.</procdesc>
+        <procdate>201707</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <indspref>Common Identifier Code for each catchment and reach segment (COMID)</indspref>
+    <direct>Raster</direct>
+  </spdoinfo>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>BANKFULL_CONUS.txt</enttypl>
+        <enttypd>Comma delimited tabular data containing bankfull characteristics of NHDPlus V 2.1 flowlines.</enttypd>
+        <enttypds>U.S. Geological Survey</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>COMID</attrlabl>
+        <attrdef>Unique ID to relate to each NHDPlus version 2 catchment and flowline.</attrdef>
+        <attrdefs>http://nhd.usgs.gov/NHDDataDictionary_model2.0.pdf</attrdefs>
+        <attrdomv>
+          <udom>Unique numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BANKFULL_WIDTH</attrlabl>
+        <attrdef>Estimated bankfull width of NHDPlus version 2.1's flowline reach calculated using Bieger 's regression equation (Bieger et al, 2015) -9999 denotes NODATA.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>575.98</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BANKFULL_DEPTH</attrlabl>
+        <attrdef>Estimated bankfull depth of NHDPlus version 2.1's flowline reach calculated using Bieger 's regression equation (Bieger et al, 2015) -9999 denotes NODATA.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>10.11</rdommax>
+            <attrunit>meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BANKFULL_XSEC_AREA</attrlabl>
+        <attrdef>Estimated bankfull cross sectional area of NHDPlus version 2.1's flowline reach calculated using Bieger 's regression equation (Bieger et al, 2015) -9999 denotes NODATA.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>5279.18</rdommax>
+            <attrunit>square meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>Shannon E Jackson</cntper>
+          <cntorg>U.S. Geological Survey - ScienceBase</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>443-498-5603</cntvoice>
+        <cntemail>sejackson@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government. Although this database has been subjected to rigorous review and is substantially complete, the USGS reserves the right to revise the data pursuant to further analysis and review. Furthermore, it is released on condition that neither the USGS nor the U.S. Government may be held liable for any damages resulting from its authorized or unauthorized use. Although these data have been processed successfully on a computer system at the U.S. Geological Survey, no warranty expressed or implied is made regarding the display or utility of the data on any other system, or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. The U.S. Geological Survey shall not be held liable for improper or incorrect use of the data described and/or contained herein.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20200821</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Shannon E Jackson</cntper>
+          <cntorg>USGS MDWSC</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>5522 Research Park Drive</address>
+          <city>Baltimore</city>
+          <state>MD</state>
+          <postal>21228</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>443-498-5603</cntvoice>
+        <cntemail>sejackson@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>
